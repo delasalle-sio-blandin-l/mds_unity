@@ -4,9 +4,12 @@
 public class AnimateGirlSpritesheet : MonoBehaviour {
     SpritesheetAnimator animator;
 
+    public float speed = 1.5f;
+
     void Start() {
         animator = GetComponent<SpritesheetAnimator>();
     }
+
 
     void Update() {
         if (Input.GetKey(KeyCode.RightArrow)) {
@@ -14,7 +17,7 @@ public class AnimateGirlSpritesheet : MonoBehaviour {
             transform.localRotation = Quaternion.Euler(0, 0, 0);
             animator.Play(Anims.Run);
 
-        } else if (Input.GetKey(KeyCode.Space)) {
+        } else if (Input.GetKey(KeyCode.DownArrow)) {
 
             animator.Play(Anims.Roll);
 
@@ -23,6 +26,9 @@ public class AnimateGirlSpritesheet : MonoBehaviour {
             transform.localRotation = Quaternion.Euler(0, 180, 0);
             animator.Play(Anims.Run);
 
+        } else if(Input.GetKey(KeyCode.UpArrow)) {
+
+            animator.Play(Anims.Jump);
         } else {
 
             animator.Play(Anims.Iddle);
