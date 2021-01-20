@@ -34,6 +34,9 @@ public class AnimateGirl : MonoBehaviour
         if (Input.GetKey(KeyCode.RightArrow))
         {
             move += Vector3.right * maxDistancePerFrame;
+            animator.SetFloat("speed", 2f);
+            spriteRenderer.flipX = false;
+
         }
         else if (Input.GetKey(KeyCode.LeftArrow))
         {

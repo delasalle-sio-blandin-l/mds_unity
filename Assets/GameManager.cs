@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour {
         public int Score;
         public GameObject Player;
         public GameObject ScoreContainer;
+        
     }
 
     public GameObject Ball;
@@ -66,7 +67,7 @@ public class GameManager : MonoBehaviour {
         }
         if (Orange.Score < 5 && Blue.Score < 5) {
             GoalText.SetActive(true);
-            GoalText.GetComponent<TextMesh>().text = "Buuuuuuut !\n" + scored.ToString() + " marque !";
+            GoalText.GetComponent<TextMesh>().text = "Golazooooo !\n" + scored.ToString() + " marque !";
         } else {
             GameOverText.SetActive(true);
             GameOverText.GetComponent<TextMesh>().text = "Fin de partie !\n" + scored.ToString() + " gagne !";
