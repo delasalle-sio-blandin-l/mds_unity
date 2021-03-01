@@ -729,9 +729,10 @@ GameObject:
   - component: {fileID: 485836453}
   - component: {fileID: 485836452}
   - component: {fileID: 485836451}
+  - component: {fileID: 485836454}
   m_Layer: 0
   m_Name: But_Orange
-  m_TagString: Untagged
+  m_TagString: Orange
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -743,7 +744,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 485836450}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -827,6 +828,29 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &485836454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 485836450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 094d0ea98c9d9d747b86f801397c4eec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Ball: {fileID: 1681846236}
+  Orange:
+    Score: 0
+    Player: {fileID: 1603081590}
+    ScoreContainer: {fileID: 485836450}
+  Blue:
+    Score: 0
+    Player: {fileID: 2130238782}
+    ScoreContainer: {fileID: 1428211347}
+  GameOverText: {fileID: 0}
+  GoalText: {fileID: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1155,9 +1179,10 @@ GameObject:
   - component: {fileID: 1428211350}
   - component: {fileID: 1428211349}
   - component: {fileID: 1428211348}
+  - component: {fileID: 1428211351}
   m_Layer: 0
   m_Name: But_Bleu
-  m_TagString: Untagged
+  m_TagString: Blue
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1253,6 +1278,29 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1428211351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1428211347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 094d0ea98c9d9d747b86f801397c4eec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Ball: {fileID: 1681846236}
+  Orange:
+    Score: 0
+    Player: {fileID: 1603081590}
+    ScoreContainer: {fileID: 2076541957}
+  Blue:
+    Score: 0
+    Player: {fileID: 2130238782}
+    ScoreContainer: {fileID: 105610098}
+  GameOverText: {fileID: 105610098}
+  GoalText: {fileID: 2076541957}
 --- !u!1 &1603081590
 GameObject:
   m_ObjectHideFlags: 0
@@ -1271,7 +1319,7 @@ GameObject:
   - component: {fileID: 1603081592}
   m_Layer: 0
   m_Name: girl 1
-  m_TagString: Untagged
+  m_TagString: GirlOrange
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1477,6 +1525,8 @@ GameObject:
   - component: {fileID: 1681846242}
   - component: {fileID: 1681846238}
   - component: {fileID: 1681846237}
+  - component: {fileID: 1681846241}
+  - component: {fileID: 1681846243}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Untagged
@@ -1580,12 +1630,27 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1681846236}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.13, y: -0.8, z: 0}
+  m_LocalPosition: {x: -0, y: -0.67, z: 0}
   m_LocalScale: {x: 0.75389403, y: -0.6817213, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1681846241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1681846236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97912bc97aff62c4c805e0eb17f47e79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Speed: 3
+  ShapeRecoverRate: 0.05
+  effect: {fileID: 100000, guid: f2dba9e16cd347f44a395b8204544ee5, type: 3}
 --- !u!114 &1681846242
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1598,7 +1663,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 797c185ab4cfaee47a0270233f8bb6d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BallPrefab: {fileID: 0}
+  BallPrefab: {fileID: 1681846236}
+--- !u!114 &1681846243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1681846236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97368dc26931f894793f33c9a3e053fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreBlue: {fileID: 105610098}
+  scoreOrange: {fileID: 2076541957}
 --- !u!1 &1743883646
 GameObject:
   m_ObjectHideFlags: 0
@@ -1881,7 +1960,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2076541957}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.062777795, y: 0.73, z: 0}
+  m_LocalPosition: {x: -0.02, y: 0.65, z: 0}
   m_LocalScale: {x: 0.10766663, y: 0.336849, z: 1}
   m_Children: []
   m_Father: {fileID: 1603081595}
@@ -1929,8 +2008,8 @@ SpriteRenderer:
   m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: faed3a92e7f6ad14b8a8378a26aba416, type: 3}
   m_Color: {r: 0.9803922, g: 0.3647059, b: 0.03137255, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
+  m_FlipX: 1
+  m_FlipY: 1
   m_DrawMode: 0
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
@@ -1970,7 +2049,7 @@ GameObject:
   - component: {fileID: 2130238783}
   m_Layer: 0
   m_Name: girl 2
-  m_TagString: Untagged
+  m_TagString: GirlBlue
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
